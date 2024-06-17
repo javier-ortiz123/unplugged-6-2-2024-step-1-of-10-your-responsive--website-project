@@ -181,8 +181,12 @@ header nav ul {
     justify-content: space-around;
 width: 100%;
   }
+ 
+  header nav ul li {
+    font-size: 1.125em;
+  }
 
-footer {
+  footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -221,18 +225,37 @@ footer .copyright {
 
 /* Hero Area */
 
-.hero-area {
-  display: flex;
-  justify-content: center;
-}
-
-/* Aside */
-
 aside {
+  background-color: #587a5f;
   display: flex;
   justify-content: center;
 }
 
+aside .form {
+  margin-top: 30px;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 /* features */
 .features {
@@ -414,6 +437,15 @@ margin-bottom: 50px;
       max-width: 640px;
       margin: 100px 0;
     }
+    h2 {
+      font-size: 2.25em;
+      line-height: 1.333;
+    }
+  
+    h3 {
+      font-size: 1.5em;
+      line-height: 1.25;
+    }
   
     /* Header */
     header {
@@ -438,6 +470,12 @@ margin-bottom: 50px;
     }
   
     /* Hero Area */
+
+    .hero-area h1 {
+      font-size: 3em;
+      line-height: 1;
+      margin: 0;
+    }
   
     /* Aside */
     aside .content-wrapper {
@@ -454,6 +492,11 @@ margin-bottom: 50px;
     }
   
     /* Features */
+
+    .features h2 {
+      margin-bottom: 20px;
+    }
+    
     .features article {
       display: flex;
       align-items: center;
