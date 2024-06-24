@@ -65,32 +65,13 @@ video {
   vertical-align: middle;
 }
 
-/*
- * Remove default fieldset styles.
+/* Remove default fieldset styles.*/
+ /* Allow only vertical resizing of textareas.
  */
 
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
+ textarea {
   resize: vertical;
 }
-
-
-
-
-
-
-
-
-
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -112,12 +93,15 @@ html {
 body {
   font-size: 1em;
   font-family: 'Open Sans', sans-serif;
+  color: #e2e3ed;
   text-align: left;
 }
 
-ul,
+ul, 
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -127,19 +111,29 @@ a {
 
 h2 {
   font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   font-size: 1.875em;
 }
 
 h3,
 h4 {
   font-family: 'Poppins', sans-serif;
-  margin: 20px 0;
+  font-weight: 500;
   font-size: 1.125em;
+  margin: 20px 0;
 }
 
 p {
   font-size: .875em;
   line-height: 1.285;
+}
+
+img {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
 }
 
 address {
@@ -152,45 +146,55 @@ address {
 }
 
  /* -------------------- Base Header - Footer Styles -------------------- */
-   header {
-    display: flex;
-    justify-content: center;
-padding: 15px 0;
-  }
-   
-   header .content-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
-    margin: 0;
-  }
+ header {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  background-color: #202322;
+}
+
+header .content-wrapper {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+header figure {
+  width: 60%;
+}
 
 .header-divider {
-width: 100%;
-height: 1px;
-margin: 10px 0 20px 0;
+  background: #3a3a3a;
+  height: 1px;
+  width: 100%;
+  margin: 10px 0 20px 0;
 }
 
 header nav {
   width: 60%;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 header nav ul {
-    display: flex;
-    justify-content: space-around;
-width: 100%;
-  }
- 
-  header nav ul li {
-    font-size: 1.125em;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
 
-  footer {
+header nav ul li {
+  font-size: 1.125em;
+}
+
+footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: #202322;
 }
 
 footer p {
@@ -201,20 +205,20 @@ footer .content-wrapper {
   width: 55%;
 }
 
-footer contact {
+footer .contact {
   margin-bottom: 50px;
 }
 
-footer .socal-icons {
-display: flex;
-justify-content: space-around;
-align-items: center;
+footer .social-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-footer .socal-icons p {
-display: flex;
-justify-content: center;
-align-items: center;
+footer .social-icons p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer .copyright {
@@ -224,9 +228,24 @@ footer .copyright {
 /* -------------------- Mobile Styles - Homepage -------------------- */
 
 /* Hero Area */
+.hero-area {
+  background: url(../img/unplugged-retreat.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+}
 
+.hero-area h1 {
+  font-size: 2.25em;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+/* Aside */
 aside {
-  background-color: #587a5f;
+  background-color: #527158;
   display: flex;
   justify-content: center;
 }
@@ -251,25 +270,27 @@ input[type=button] {
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 1.125em;
-  color: #e3e4ec;
+  color: #e2e3ed;
   border: none;
   text-align: center;
   text-transform: uppercase;
 }
-
 /* features */
 .features {
+  background: url('../img/unplugged-retreat-features.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
 }
 
 .features h2 {
   margin-bottom: 60px;
-} 
+}
 
 .features article {
-width: 63%;
-margin: 30px 0;
+  width: 63%;
+  margin: 30px 0;
 }
 
 .features .features-items {
@@ -280,42 +301,46 @@ margin: 30px 0;
 }
 
 .features p {
+  text-align: center;
   margin: 0;
 }
-
-
 
 /*reviews*/
 
 .reviews {
+  background-color: #578173;
   display: flex;
   justify-content: center;
 }
 
 .reviews h2 {
-
+  margin-bottom: 40px;
+  line-height: 1;
 }
 
 .reviews h3 {
   width: 55%;
+  margin: 20px 0;
 }
 /* ==========================================================================
    About Page
    ========================================================================== */
 
-.mission {
-  display: flex;
-  justify-content: center;
-}
-
-.content-section {
-  display: flex;
-  justify-content: center;
-}
-
-.contact-content p{
-margin: 0;
-}
+   .mission {
+    background-color: #527158;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-section {
+    background-color: #2a423a;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-content p {
+    margin: 0;
+  }
 
 
 
@@ -323,7 +348,8 @@ margin: 0;
 ================================ */
 
 .faq {
-  display:flex;
+  background-color: #527158;
+  display: flex;
   justify-content: center;
 }
 
@@ -336,11 +362,16 @@ margin: 0;
 }
 
 .faq h2 {
-margin: 40px;
+  margin-bottom: 40px;
+  line-height: 1;
 }
 
 .faq-content {
-margin-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+.faq-content h4 {
+  line-height: 1.333;
 }
 
 /* ==========================================================================
@@ -351,8 +382,7 @@ margin-bottom: 50px;
  * Hide visually and from screen readers
  */
 
-.hidden,
-[hidden] {
+ .hidden {
   display: none !important;
 }
 
@@ -365,34 +395,34 @@ margin-bottom: 50px;
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 
-.sr-only {
+.visuallyhidden {
   border: 0;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
-  white-space: nowrap;
   width: 1px;
+  white-space: nowrap;
   /* 1 */
 }
 
 /*
- * Extends the .sr-only class to allow the element
+ * Extends the .visuallyhidden class to allow the element
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
 
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
   overflow: visible;
   position: static;
-  white-space: inherit;
   width: auto;
+  white-space: inherit;
 }
 
 /*
@@ -415,28 +445,33 @@ margin-bottom: 50px;
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix::before,
-.clearfix::after {
+.clearfix:before,
+.clearfix:after {
   content: " ";
+  /* 1 */
   display: table;
+  /* 2 */
 }
 
-.clearfix::after {
+.clearfix:after {
   clear: both;
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design. These examples override the primary ('mobile first') styles.
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 768px) {
-  /* Style adjustments for viewports that meet the condition */
+
+   @media only screen and (min-width:768px) {
     /*Tablet styles here*/
-  /* General styles */
+  
+    /* General styles */
     .content-wrapper {
       max-width: 640px;
       margin: 100px 0;
     }
+  
     h2 {
       font-size: 2.25em;
       line-height: 1.333;
@@ -457,6 +492,10 @@ margin-bottom: 50px;
       justify-content: space-between;
     }
   
+    header figure {
+      width: 30%;
+    }
+  
     header nav {
       width: 20%;
     }
@@ -470,7 +509,11 @@ margin-bottom: 50px;
     }
   
     /* Hero Area */
-
+  
+    .hero-area {
+      min-height: 600px;
+    }
+  
     .hero-area h1 {
       font-size: 3em;
       line-height: 1;
@@ -492,11 +535,11 @@ margin-bottom: 50px;
     }
   
     /* Features */
-
+  
     .features h2 {
       margin-bottom: 20px;
     }
-
+  
     .features article {
       display: flex;
       align-items: center;
@@ -505,36 +548,57 @@ margin-bottom: 50px;
     }
   
     .features .features-item-description {
-      width: 50%;
+      width: 62%;
     }
-     /* Reviews */
-  .reviews article {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .reviews article div {
-    width: 49%;
-  }
-
-  /* Footer */
-  footer .content-wrapper {
-    width: 65%;
-  }
-
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  footer .contact {
-    margin-bottom: 0;
-  }
-
-  footer .copyright {
-    width: 100%;
-  }
+  
+    /* Reviews */
+    .reviews article {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .reviews h2 {
+      width: 85%;
+    }
+  
+    .reviews article figure,
+    .reviews article div {
+      width: 49%;
+    }
+  
+    .reviews h3 {
+      width: 75%;
+      margin: 0;
+    }
+  
+    /* Footer */
+    footer .content-wrapper {
+      width: 65%;
+    }
+  
+    footer .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+  
+    footer .contact {
+      margin-bottom: 0;
+    }
+  
+    footer h4 {
+      font-size: 1.5em;
+      margin-bottom: 40px;
+    }
+  
+    footer p {
+      line-height: 1.285;
+    }
+  
+    footer .copyright {
+      width: 100%;
+    }
   
   
   /* ==========================================================================
@@ -545,7 +609,7 @@ margin-bottom: 50px;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding-top: 20px
+      padding-top: 20px;
     }
   
     .mission-content p {
@@ -562,22 +626,32 @@ margin-bottom: 50px;
       align-items: flex-start;
     }
   
+    .contact-content h4 {
+      font-size: 1.5em;
+    }
+  
     /* ==========================================================================
        FAQ Page
        ========================================================================== */
   
-    .faq .content-wrapper {
-      justify-content: space-between;
+       .faq .content-wrapper {
+        justify-content: space-between;
+      }
+    
+      .faq-content {
+        flex-basis: 45%;
+      }
+    
+      .faq h2 {
+        width: 100%;
+      }
+    
+      .faq h4,
+      .faq p {
+        font-size: .875em;
+        line-height: 1.125;
+      }
     }
-  
-    .faq-content {
-      flex-basis: 45%;
-    }
-  
-    .faq h2 {
-      width: 100%;
-    }
-  }
   
   @media only screen and (min-width: 1200px) {  
     /*Desktop styles here */  
@@ -587,16 +661,28 @@ margin-bottom: 50px;
       max-width: 960px;
  }
     /* Header */
-        header {
-            padding: 15px 0;
-        }
+    header {
+      padding: 15px 0;
+    }
+  h2 {
+      font-size: 2.25em;
+    }
+   h3,
+    h4 {
+      font-size: 1.875em;
+    }
+  
+    p {
+      font-size: 1.125em;
+      line-height: 1.333;
+    }
      
        
      /* Hero */
-        .hero-area h1 {
-            width: 80%;
-        }
-     
+     .hero-area h1 {
+      font-size: 3.75em;
+      width: 80%;
+     }
         /* Aside */
         aside .content-wrapper {
             justify-content: space-around;
@@ -618,27 +704,42 @@ margin-bottom: 50px;
         }
      
         /* Reviews */ 
-        .reviews article div {
-            width: 42%; 
+        .reviews h2 {
+          padding-bottom: 50px;
         }
-     
+        .reviews article div {
+          width: 42%;
+        }
+        footer h4 {
+          font-size: 1.875em;
+        }
     /* ==========================================================================
        About Page
        ========================================================================== */
        
        .mission h2,
-        .contact-section .content-wrapper h2 {
-            width: 95%
-        }
+  .contact-section .content-wrapper h2 {
+    width: 95%;
+    font-size: 3em;
+  }
+
+  .contact-content h4 {
+    font-size: 1.875em;
+  }
      
     /* ==========================================================================
        FAQ Page
        ========================================================================== */
-        .faq h2 {
-            width: 100%;
-        }
-     
-    }
+       .faq h2 {
+        width: 100%;
+        font-size: 3em;
+      }
+    .faq h4,
+      .faq p {
+        font-size: 1.125em;
+        line-height: 1;
+      }
+  }
 
 
 
@@ -657,11 +758,12 @@ margin-bottom: 50px;
 
 @media print {
   *,
-  *::before,
-  *::after {
-    background: #fff !important;
+  *:before,
+  *:after {
+    background: transparent !important;
     color: #000 !important;
     /* Black prints faster */
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
