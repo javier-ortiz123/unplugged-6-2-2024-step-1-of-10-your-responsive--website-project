@@ -587,6 +587,10 @@
     .features h2 {
       margin-bottom: 20px;
     }
+
+    .features .features-items {
+      align-items: flex-start;
+    }
   
     .features article {
       display: flex;
@@ -597,6 +601,10 @@
   
     .features .features-item-description {
       width: 62%;
+    }
+
+    .features i {
+      margin-bottom: 30px;
     }
   
     /* Reviews */
@@ -643,6 +651,11 @@
     footer p {
       line-height: 1.285;
     }
+
+    footer .social-icons {
+      width: 12.5em;
+      justify-content: space-between;
+    }
   
     footer .copyright {
       width: 100%;
@@ -661,6 +674,10 @@
   
     .mission-content p {
       width: 45%;
+    }
+
+    .map figure {
+      padding-bottom: 45.5%;
     }
   
     .contact-section .content-wrapper h2 {
@@ -774,7 +791,10 @@
     /* ==========================================================================
     About Page
     ========================================================================== */
-  
+    .map figure {
+      padding-bottom: 37.5%;
+    }
+    
     .mission h2,
     .contact-section .content-wrapper h2 {
       width: 95%;
